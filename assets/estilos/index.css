@@ -1,0 +1,909 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*:not(i,span){
+    font-family: "Poppins", sans-serif;
+}
+
+
+:root{
+    --paragrafos: #404040;
+    --principal: #0061fe;
+    --principalHover: #033380;
+    --header: #213440;
+    --header-links: #fff;
+    --header-hover: #fff;
+    --items: #222;
+    --complementar: #fff;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+    color: var(--paragrafos);
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.limitadorMother{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; */
+}
+
+.limitador{
+    max-width: 2000px;
+    width: 100%;
+    border: 0px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.infosTopBar{
+    height: 30px;
+    width: 100%;
+    border-bottom: 1px solid #cccc;
+    display: none;
+}
+
+header{
+    width: 100%;
+    background-color: var(--header);
+    border: 0px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 0px solid #000;
+    height: 70px;
+    left: 0;
+    top: 0;
+    transition: all .2s ease;
+    /* position: fixed; */
+}
+
+.menuFixo{
+    position: static;
+}
+
+.menuNFixo{
+    position: fixed;
+    z-index: 999;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    height: 60px;
+}
+
+.logo a{
+    width: 140px;
+    padding: 0px 15px;
+    margin-right: 35px;
+    padding-left: 0px;
+    border-right: 0px solid #ccc;
+    color: var(--header-links);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo a span{
+    color: #fff;
+}
+
+.perfil{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin-right: 8px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logoMenu{
+    display: flex;
+    align-items: center;
+}
+
+.menuPortifolio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.menuPortifolio:hover a{
+    color: #777;
+}
+
+.menuPortifolio li{
+    margin-left: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.menuPortifolio li a{
+    font-size: 14px;
+    font-weight: 450;
+    position: relative;
+    z-index: 0;
+    transition: all 0.1s ease-in-out;
+    padding: 7px 7px;
+    color: var(--header-links);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menuPortifolio li a span{
+    color: #fff;
+}
+
+.menuPortifolio li a i{
+    color: #fff;
+    margin-left: 5px;
+}
+
+.menuPortifolio li a::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--header-hover);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: scalex(0);
+    transform-origin: right;
+    transition: transform 0.2s ease-out;
+}
+
+.menuPortifolio li a:hover{
+    color: #222;
+    /* font-weight: 700; */
+}
+
+.menuPortifolio li a:hover i, .menuPortifolio li a:hover span{
+    color: #222;
+    /* font-weight: 700; */
+}
+.menuPortifolio li a:hover::before{
+    transform: scalex(1);
+    transform-origin: left;
+    transition: transform 0.2s ease-out;
+}
+
+.redes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #fff;
+    padding-right: 10px;
+}
+
+.redes i{
+    color: #fff;
+    font-size: 17px;
+    margin-right: 0px;
+    transition: transform 0.2s ease-out;
+    display: block;
+}
+
+.redes a{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.2s ease-out;
+    border: 0px solid #fff;
+    height: 32px;
+    width: 32px;
+    border-radius: 100%;
+}
+.redes a:hover{
+    background-color: #fff;
+}
+
+.redes a:hover i{
+    color: var(--header);
+}
+
+
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.redesEConta{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacte-me{
+    margin-left: 20px;
+}
+
+.contacte-me a{
+    padding: 8px 15px;
+    background-color: white;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s ease;
+}
+
+.contacte-me span{
+    font-weight: 450;
+    margin-left: 7px;
+    color: var(--header);
+}
+
+.contacte-me span i{
+    color: var(--header);
+}
+
+.contacte-me a:hover{
+    background-color: transparent;
+    border: 1px solid #fff;
+
+}
+
+.contacte-me a:hover i{
+    color: #fff;
+
+}
+
+.contacte-me a:hover span{
+    color: #fff;
+
+}
+main{
+    width: 100%;
+    min-height: 40px;
+    border-bottom: 1px solid black;
+    background-color: #eee;
+}
+
+
+
+
+.slide{
+    width: 100%;
+    height: 85vh;
+    background-color: #eee;
+    border-bottom: 1px solid black;
+    background-image: url(../img/banner/bannerOlaya.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gradiente{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, #000000d5, #000000a6);
+    z-index: 0;
+}
+
+.textoApresentacao{
+    z-index: 1;
+}
+.textoApresentacao h2{
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.textoApresentacao h2 span{
+    color: #fff;
+    font-weight: 400;
+    font-size: 3rem;
+}
+
+.textoApresentacao h2 span strong{
+    color: var(--complementar);
+    font-weight: 400;
+}
+
+nav, section, .textoApresentacao{
+    width: 1280px;
+    border: 0px solid black;
+}
+
+.oqueSou{
+    color: #fff;
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 14px;
+    background-color: var(--header);
+    width: 240px;
+    padding: 5px 15px;
+    border-radius: 4px;
+}
+
+.skils{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: 0px solid orange;
+    height: 140px;
+}
+
+.skillContainer{
+    position: absolute;
+    top: -100px;
+    left: auto;
+    height: 340px;
+    width: 900px;
+    background-color: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 0px solid red;
+}
+
+.skill{
+    width: calc(100%/3);
+    height: 300px;
+    border-right: 1px solid #aaa;
+}
+
+.skill:last-child{
+    border: 0px;
+}
+
+.cabecalhosSkill{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.cabecalhosSkill .iconSkill{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: var(--header);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.cabecalhosSkill .iconSkill i{
+    display: block;
+    font-size: 25px;
+    color: #fff;
+}
+
+.tituloSkill{
+    font-size: 16px;
+    font-weight: 450;
+    color: #000;
+}
+
+.textoSimplesDesc{
+    width: calc(100% - 0px);
+    text-align: center;
+    font-size: 13.5px;
+    padding: 10px 10px;
+    color: #555;
+    border: 0px solid black;
+}
+
+.linhDsd{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linhDsdDe{
+    width: 15%;
+    height: 1px;
+    background-color: #aaa;
+    margin-top: 10px;
+}
+
+.quadradosDeLinguagens{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.colunaQuadro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qd{
+    width: 65px;
+    height: 65px;
+    margin: 5px;
+    background-color: transparent;
+    border: 1px solid #aaa;
+    /* border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logoQd{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    display: none;
+}
+
+.logoQd img{
+    width: 60px;
+}
+
+.nomeLinguagem{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.projetos{
+    margin-top: 140px;
+}
+
+.tituloProjetos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tituloProjetos h2{
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0px 15px;
+    color: #777;
+}
+
+.linhaTitulo{
+    width: 550px;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.projetoContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projeto{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1280px;
+    flex-wrap: wrap!important;
+    margin-top: 15px;
+}
+
+.projet{
+    width: 413px;
+    min-height: 250px;
+    border: 0px solid black;
+    margin: 5px 5px;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: all .3s ease;
+}
+
+.imagemProject{
+    width: 100%;
+    height: 250px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.projetTitulo{
+    margin-top: 5px;
+    margin: 10px 0px;
+    padding: 7px 0px;
+    border-bottom: 1px solid #aaa;
+    transition: all .3s ease;
+}
+.projet:hover .projetTitulo{
+    border-bottom: 1px solid var(--header);
+}
+
+.projet:hover{
+    border-radius: 4px;
+    padding: 35px;
+}
+.projetTitulo h4{
+    font-size: 15px;
+    color: #222;
+    font-weight: 500;
+}
+
+.headerProject{
+
+}
+
+.headerProject a i{
+    font-size: 18px;
+    color: var(--header);
+}
+
+.headerProject a:last-child{
+    margin-left: 5px;
+}
+
+.sobreMin{
+    width: 1280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0px solid black;
+}
+
+.containerSobreMi{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+    background-color: var(--header);
+    padding: 100px 0px;
+    min-height: 100vh;
+}
+
+.fotoAly, .descricaoSobreMin{
+    width: 500px;
+}
+
+.descricaoSobreMin{
+    display: none;
+}
+
+.fotoAly{
+    min-height: 600px;
+    border: 0px solid black;
+    margin-right: 15px;
+    background-color: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 40px;
+    position: relative;
+}
+.arteSobre{
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    border: 1px solid #fff;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
+.descricaoSobreMin h2{
+    color: #fff;
+    font-weight: 500;
+    font-size: 2rem;
+}
+.descricaoSobreMin p{
+    color: #fff;
+    font-size: 1rem;
+
+}
+
+.bolinhaC{
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    border: 2px dotted #fff;
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+    animation: girar 20s linear infinite;
+}
+
+.fotoSobre{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+    background-color: #eee;
+}
+
+.fotoAly h2{
+    margin-top: 15px;
+    font-size: 2rem;
+}
+
+.btnsContact{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 22;
+}
+
+.btnsContact a{
+    width: calc((100% / 2) - 5px);
+    height: 50px;
+    border: 0px solid black;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--header);
+    color: #fff;
+    transition: all .3s ease;
+}
+
+.btnsContact a:last-child{
+    background-color: #ccc;
+    transition: all .3s ease;
+
+}
+
+.btnsContact a:first-child span, .btnsContact a:first-child i{
+    color: #fff;
+}
+
+.btnsContact a:last-child:hover{
+    background-color: var(--header);
+
+}
+.btnsContact a:last-child:hover i, .btnsContact a:last-child:hover span{
+    color: #fff;
+}
+
+.btnsContact a:first-child:hover{
+    background-color: #ccc;
+
+}
+.btnsContact a:first-child:hover i, .btnsContact a:first-child:hover span{
+    color: #222;
+}
+
+.btnsContact a i{
+    margin-right: 5px;
+}
+
+
+.justificativaJob{
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.kl{
+    margin: 30px 0px;
+}
+
+footer{
+    width: 100%;
+    height: 350px;
+    border: 0px solid black;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--header);
+}
+
+.redesFooter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    
+}
+
+.redesFooter a{
+    width: 50px;
+    height: 50px;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    margin: 0px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease;
+}
+
+.redesFooter a i{
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.redesFooter a:hover{
+    background-color: #fff;
+}
+.redesFooter a:hover i{
+    color: var(--header);
+}
+footer p{
+    font-size: 1.2rem;
+    text-align: center;
+    width: 350px;
+    font-weight: 400;
+    color: #fff;
+    margin-top: 40px;
+}
+
+.assinatura{
+    margin-top: 10px;
+}
+
+.assinatura span:first-child{
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.contactos{
+    margin-top: 50px;
+}
+.contactos span{
+    color: #fff;
+}
+
+.perventagensDeApredizado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.linguagemPerc{
+    width: 75%;
+    height: 10px;
+    border: 1px solid var(--header);
+    border-radius: 40px;
+    /* overflow: hidden; */
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+
+
+.percL{
+    position: relative;
+    width: 90%;
+    height: 10px;
+    background-color: var(--header);
+    border-radius: 40px;
+    transition: all .7s ease;
+}
+
+
+.nomeLing{
+    position: absolute;
+    top: -20px;
+    right: 0px;
+    font-size: 12px;
+    color: #222;
+    font-weight: 500;
+}
+
+.nomeLingP{
+    position: absolute;
+    top: -5px;
+    right: -30px;
+    font-size: 12px;
+}
+
+.otherCena{
+    height: 700px;
+}
+
+.divEcreva{
+    width: 1280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0px solid black;
+}
+
+.otherCena{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.divEcre{
+    width: calc((100% / 2) - 0px);
+    height: 400px;
+    border-right: 1px solid #aaa;
+    padding: 80px;
+    
+}
+
+.divEcre:last-child{
+    border: 0px;
+}
+
+.divEcrevaC{
+    width: 80%;
+    height: 500px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.divEcre h2{
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.divEcre p{
+    font-size: 1rem;
+    font-weight: 350;
+    text-align: justify;
+}
+
+
+.divEcre p strong{
+    font-weight: 450;
+    color: var(--header);
+}
+
+@keyframes girar{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
