@@ -1,3 +1,10 @@
+@media(max-height: 600px){
+    .slide{
+        width: 100%;
+        height: 400px;
+    }
+}
+
 @media (max-width: 1302px){
     nav, section, .textoApresentacao, .divEcreva, .projeto{
         width: 1080px;
@@ -86,6 +93,10 @@
     .skillContainer{
         width: 95%;
     }
+
+    .humburguer{
+        display: flex;
+    }
 }
 
 
@@ -119,6 +130,7 @@
 
     .skils{
         min-height: 20px;
+        display: none;
     }
     .skillContainer{
         flex-direction: column;
@@ -137,5 +149,22 @@
 @media (max-width: 796px){
     nav, section, .textoApresentacao, .divEcreva, .projeto{
         width: 90%;
+    }
+}
+
+@media (max-width: 776px){
+    .projet{
+        width: 100%;
+        min-height: 150px;
+    }
+
+    .imagemProject{
+        width: 100%;
+        height: 200px;
+    }
+
+    .divEcrevaC{
+        width: 100%;
+        height: 500px;
     }
 }
