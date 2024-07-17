@@ -1,7 +1,11 @@
-@media(max-height: 600px){
+@media(max-height: 900px), (max-width: 500px){
     .slide{
         width: 100%;
-        height: 400px;
+        height: 450px;
+    }
+
+    .linhaTitulo{
+        display: none;
     }
 }
 
@@ -165,7 +169,7 @@
 
     .divEcrevaC{
         width: 100%;
-        height: 500px;
+        min-height: 500px;
     }
     .linhaTitulo{
         width: 30%;
@@ -179,7 +183,22 @@
 
     .fotoAly{
         width: 95%;
+        padding: 20px;
+        border-radius: 5px;
+        margin-left: 20px;
     }
+
+    .fotoAly h2 {
+        margin-top: 15px;
+        font-size: 1.5rem;
+    }
+
+    .justificativaJob{
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+  
 }
 
 @media (max-width: 566px){
@@ -188,3 +207,14 @@
     }
 }
 
+@media (max-width: 468px){
+    .divEcre h2{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 412px){
+    .btnsContact a i{
+        display: none;
+    }
+}
