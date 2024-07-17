@@ -6,7 +6,7 @@
 }
 
 @media (max-width: 1302px){
-    nav, section, .textoApresentacao, .divEcreva, .projeto{
+    nav, section, .textoApresentacao, .divEcreva, .projeto, .sobreMin{
         width: 1080px;
     }
 
@@ -22,7 +22,7 @@
 
     .divEcrevaC{
         width: 100%;
-        height: 500px;
+        min-height: 500px;
     }
     .linhaTitulo{
         width: 35%;
@@ -31,7 +31,7 @@
 
 
 @media (max-width: 1132px){
-    nav, section, .textoApresentacao, .divEcreva, .projeto{
+    nav, section, .textoApresentacao, .divEcreva, .projeto, .sobreMin{
         width: 950px;
     }
 
@@ -47,13 +47,13 @@
 
     .divEcrevaC{
         width: 100%;
-        height: 500px;
+        min-height: 500px;
     }
 }
 
 
 @media (max-width: 1052px){
-    nav, section, .textoApresentacao, .divEcreva, .projeto{
+    nav, section, .textoApresentacao, .divEcreva, .projeto, .sobreMin{
         width: 950px;
     }
 
@@ -69,7 +69,7 @@
 
     .divEcrevaC{
         width: 100%;
-        height: 500px;
+        min-height: 500px;
     }
 
     .logo a{
@@ -82,7 +82,7 @@
 
 
 @media (max-width: 924px){
-    nav, section, .textoApresentacao, .divEcreva, .projeto{
+    nav, section, .textoApresentacao, .divEcreva, .projeto, .sobreMin{
         width: 850px;
     }
 
@@ -147,7 +147,7 @@
 }
 
 @media (max-width: 796px){
-    nav, section, .textoApresentacao, .divEcreva, .projeto{
+    nav, section, .textoApresentacao, .divEcreva, .projeto, .sobreMin{
         width: 90%;
     }
 }
@@ -167,4 +167,24 @@
         width: 100%;
         height: 500px;
     }
+    .linhaTitulo{
+        width: 30%;
+    }
 }
+
+@media (max-width: 584px){
+    .arteSobre, .bolinhaC{
+        display: none;
+    }
+
+    .fotoAly{
+        width: 95%;
+    }
+}
+
+@media (max-width: 566px){
+    nav, section, .textoApresentacao, .divEcreva, .projeto, .sobreMin{
+        width: 95%;
+    }
+}
+
