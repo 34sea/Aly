@@ -123,6 +123,7 @@
         width: 90%;
         border: 0px;
         padding: 30px!important;
+        min-height: 40px;
     }
 
     .divEcre:last-child{
@@ -205,12 +206,18 @@
     nav, section, .textoApresentacao, .divEcreva, .projeto, .sobreMin{
         width: 95%;
     }
+
+    .redesEConta .redes{
+        display: none!important;
+    }
 }
 
 @media (max-width: 468px){
     .divEcre h2{
         font-size: 1.5rem;
     }
+
+    
 }
 
 @media (max-width: 412px){
