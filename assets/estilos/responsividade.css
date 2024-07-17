@@ -1,0 +1,141 @@
+@media (max-width: 1302px){
+    nav, section, .textoApresentacao, .divEcreva, .projeto{
+        width: 1080px;
+    }
+
+    .projet{
+        width: 335px;
+        min-height: 150px;
+    }
+
+    .imagemProject{
+        width: 100%;
+        height: 200px;
+    }
+
+    .divEcrevaC{
+        width: 100%;
+        height: 500px;
+    }
+    .linhaTitulo{
+        width: 35%;
+    }
+}
+
+
+@media (max-width: 1132px){
+    nav, section, .textoApresentacao, .divEcreva, .projeto{
+        width: 950px;
+    }
+
+    .projet{
+        width: 48.9%;
+        min-height: 150px;
+    }
+
+    .imagemProject{
+        width: 100%;
+        height: 200px;
+    }
+
+    .divEcrevaC{
+        width: 100%;
+        height: 500px;
+    }
+}
+
+
+@media (max-width: 1052px){
+    nav, section, .textoApresentacao, .divEcreva, .projeto{
+        width: 950px;
+    }
+
+    .projet{
+        width: 48.5%;
+        min-height: 150px;
+    }
+
+    .imagemProject{
+        width: 100%;
+        height: 200px;
+    }
+
+    .divEcrevaC{
+        width: 100%;
+        height: 500px;
+    }
+
+    .logo a{
+        width: 140px;
+        padding: 0px 0px;
+        margin-right: 0px;
+    }
+
+}
+
+
+@media (max-width: 924px){
+    nav, section, .textoApresentacao, .divEcreva, .projeto{
+        width: 850px;
+    }
+
+    .menuPortifolio{
+        display: none;
+    }
+
+    .skillContainer{
+        width: 95%;
+    }
+}
+
+
+@media (max-width: 874px){
+    nav, section, .textoApresentacao, .divEcreva, .projeto{
+        width: 750px;
+    }
+
+    .divEcrevaC{
+        flex-direction: column;
+        min-height: 40px;
+
+    }
+
+    .otherCena{
+        min-height: 40px;
+    }
+
+    .divEcre{
+        width: 90%;
+        border: 0px;
+        padding: 30px!important;
+    }
+
+    .divEcre:last-child{
+        border-top: 1px solid #ccc;
+    }
+}
+
+@media (max-width: 836px){
+
+    .skils{
+        min-height: 20px;
+    }
+    .skillContainer{
+        flex-direction: column;
+        position: static;
+        min-height: 340px;
+        width: 60%;
+        top: 0;
+    }
+    .skill{
+        width: 100%;
+        border: 0px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 796px){
+    nav, section, .textoApresentacao, .divEcreva, .projeto{
+        width: 90%;
+    }
+}

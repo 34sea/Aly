@@ -123,6 +123,7 @@ header{
     align-items: center;
     justify-content: center;
     margin-top: 15px;
+    border: 0px solid white;
 }
 
 .menuPortifolio:hover a{
@@ -897,6 +898,23 @@ footer p{
 .divEcre p strong{
     font-weight: 450;
     color: var(--header);
+}
+
+.humburguer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 30px;
+    cursor: pointer;
+}
+
+.humburguer span{
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    margin: 2px 0px;
+    border-radius: 20px;
 }
 
 @keyframes girar{
