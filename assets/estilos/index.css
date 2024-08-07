@@ -27,6 +27,9 @@
     color: var(--paragrafos);
 }
 
+body, html{
+    overflow-x: hidden!important;
+}
 a{
     text-decoration: none;
 }
