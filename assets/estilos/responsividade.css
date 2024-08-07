@@ -90,16 +90,65 @@
         width: 850px;
     }
 
-    .menuPortifolio{
-        display: none;
-    }
-
     .skillContainer{
         width: 95%;
     }
 
     .humburguer{
         display: flex;
+    }
+
+    .menuNav{
+        position: fixed;
+        height: calc(100% - 0px);
+        width: 0px;
+        top: 0px;
+        left: 0px;
+        z-index: 9999;
+        background-color: rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+        transition: all .3s ease-in-out;
+    }
+
+    .menuNav ul{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+       
+        padding: 40px 20px!important;
+        background-color: var(--header);
+        height: calc(100% - 0px);
+        width: calc(80% - 40px);
+        
+        
+    }
+
+    .menuNav ul li{
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .menuNav ul li a{
+        width: 100%;
+        justify-content: flex-start;
+        padding: 10px 0px;
+    }
+
+    .tirar{
+        display: block;
+    }
+    .tirar{
+        margin-bottom: 20px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 1.2rem;
+        font-size: 600;
+        margin-left: 10px;
+    }
+
+    .menuPortifolio{
+        margin: 0px;
+        padding: 0px;
     }
 }
 

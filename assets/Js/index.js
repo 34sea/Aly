@@ -48,3 +48,25 @@ function pintar(p){
     }
 }
 
+let tirar = document.querySelector(".tirar")
+
+let humburguer = document.querySelector(".humburguer")
+
+let menuNav = document.querySelector(".menuNav")
+humburguer.addEventListener("click", ()=>{
+    menu(true)
+})
+tirar.addEventListener("click", ()=>{
+    menu(false)
+})
+menuNav.addEventListener("click", ()=>{
+    menu(false)
+})
+let menu = (p)=>{
+    if(p){
+        menuNav.style.width = "calc(100% - 0px)"
+    }else{
+        menuNav.style.width = "0px"
+    }
+}
+
