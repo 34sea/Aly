@@ -52,7 +52,7 @@ let tirar = document.querySelector(".tirar")
 
 let humburguer = document.querySelector(".humburguer")
 
-let menuNav = document.querySelector(".menuNav")
+let menuNav = document.querySelector(".menuFix")
 humburguer.addEventListener("click", ()=>{
     menu(true)
 })
@@ -63,10 +63,12 @@ menuNav.addEventListener("click", ()=>{
     menu(false)
 })
 let menu = (p)=>{
+    
     if(p){
-        menuNav.style.width = "calc(100% - 0px)"
+        menuNav.classList.add("menuNav2")
     }else{
-        menuNav.style.width = "0px"
+        menuNav.classList.remove("menuNav2")
+
     }
 }
 
